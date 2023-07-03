@@ -18,5 +18,8 @@ It gives a comprehensive view of:
 - h1, img, ol, form, input
 - anti-div: header, nav, article, figure, footer
 
+## HTML references
 
+https://www.w3schools.com/html/ 	
 
+http://htmldog.com/guides/html/beginner/

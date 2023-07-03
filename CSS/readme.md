@@ -53,3 +53,11 @@ This course is great but loooong, if you don't have anything it well time spent
 - Length: 11h 
 - Created by: freecodecamp
 - https://www.youtube.com/watch?v=OXGznpKZ_sA
+
+
+## CSS references
+
+https://www.w3schools.com/css/ 	
+
+http://htmldog.com/guides/css/beginner/
+
