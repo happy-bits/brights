@@ -5,7 +5,7 @@
 Some great shortcuts to know about when working with VS Code:
 
     Command Palette:         Shift-Control-P 
-    Toggle comment of code:  Shift-Alt-A or Ctrl-,
+    Toggle comment of code:  Shift-Alt-A or Ctrl-'
     Format document          Shift-Alt-F
     View a .md-file          Shift-Ctrl-V
 
