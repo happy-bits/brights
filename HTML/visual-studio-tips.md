@@ -14,6 +14,8 @@ Some great shortcuts to know about when working with VS Code:
     Create <ul></ul> tag     ul and TAB
     Get ten dummy words      lorem10 and TAB
 
+    link:css                 stylesheet link
+
 ## Settings
 
     Uncheck "Compact folders"
