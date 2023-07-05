@@ -16,6 +16,8 @@ Some great shortcuts to know about when working with VS Code:
 
     link:css                 stylesheet link
 
+    Move code                markera + arrow up or down
+
 ## Settings
 
     Uncheck "Compact folders"
