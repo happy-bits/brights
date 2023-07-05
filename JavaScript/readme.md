@@ -26,6 +26,26 @@ It gives a comprehensive view of:
 - Created by: developedbyed
 - https://www.youtube.com/watch?v=wiozYyXQEVk
 
+How to grab elements from our HTML.
+How to add classes in javascript.
+Create a todo list type app in vanilla javascript.
+
+Contains:
+- document.querySelector
+- document.querySelectorAll
+- obj.style.color
+- obj.style.backgroundColor
+- obj.classList.add()
+- obj.classList.remove()
+- obj.classList.toggle()
+- obj.addEventListener('click', ()=>{})
+
+- document.createElement()
+- document.createTextNode()
+- obj.appendChild(obj)
+
+- for(let x of list){}
+
 
 ## Learn JavaScript - Full Course for Beginners
 
