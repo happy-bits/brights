@@ -1,29 +1,39 @@
+/* Show borders everywhere (excluding body and html) */
+
 * {
     border: solid 1px;
 }
 
 body, html {
-    border:0;
+    border: 0;
 }
 
-body{
-    /* background-color: lime; */
+/*  Start */
+
+body {
+    padding:30px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 30px;
 }
 
 .product {
-    /* background-color: red; */
-
     width: 230px;
-    height: 360px;
+    height:360px;
 
-    padding: 30px 20px;
-    border: solid 1px rgb(213, 213, 213);
+    padding:30px 20px;
+    border: solid 1px rgb(203, 213, 219);
 }
 
 .product__buy{
-    background-color: red;
+
     /* exercise start */
+    background-color: rgb(54, 179, 158);
+    border-radius: 20px;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
     /* exercise end */
 }
