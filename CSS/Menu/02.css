@@ -1,0 +1,12 @@
+
+/* exercise start */
+.menu {
+    display: flex;
+    border:solid 1px;
+    justify-content: space-between;
+}
+
+.menu__item {
+    list-style: none;
+}
+/* exercise end */

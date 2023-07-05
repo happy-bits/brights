@@ -1,0 +1,26 @@
+body{
+    font-family: Arial;
+    background-color: #e8e8e8;
+}
+
+.menu {
+    display: flex;
+    border: solid 1px;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: white;
+}
+
+.menu__item{
+    list-style: none;
+}
+
+.menu__group {
+    display: flex;
+    column-gap:10px; 
+    padding-left:0;
+}
+
+/* exercise start */
+
+/* exercise end */

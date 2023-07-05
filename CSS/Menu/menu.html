@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="menu.css">
+
 </head>
 
 <body>
 
     <div class="menu">
-        <ul>
-            <li class="menu__item"><a href="#">Butik</a></li>
-            <li class="menu__item"><a href="#">Matkassar</a></li>
-            <li class="menu__item"><a href="#">Recept</a></li>
-            <li class="menu__item"><a href="#">Restaurangmat</a></li>
+        <ul class="menu__group">
+            <li class="menu__item"><a class="menu__link" href="#">Butik</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--selected" href="#">Matkassar</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Recept</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Restaurangmat</a></li>
         </ul>
 
-        <ul>
-            <li class="menu__item"><a href="#">Smart inköpslista</a></li>
-            <li class="menu__item"><a href="#">Favoriter</a></li>
-            <li class="menu__item"><a href="#">Orderhistorik</a></li>
-            <li class="menu__item"><a href="#">Inköpslistor</a></li>
+        <ul class="menu__group">
+            <li class="menu__item"><a class="menu__link menu__link--small" href="#">Smart inköpslista</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--small" href="#">Favoriter</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--small" href="#">Orderhistorik</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--small" href="#">Inköpslistor</a></li>
         </ul>
     </div>
 
