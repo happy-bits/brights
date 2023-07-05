@@ -19,6 +19,14 @@ It gives a comprehensive view of:
 - async, promise
 - node.js
 
+## Javascript Dom Manipulation | Javascript Tutorial For Beginners
+
+- From: 2019
+- Length: 17min
+- Created by: developedbyed
+- https://www.youtube.com/watch?v=wiozYyXQEVk
+
+
 ## Learn JavaScript - Full Course for Beginners
 
 - From: 2018-12
@@ -26,9 +34,7 @@ It gives a comprehensive view of:
 - Created by: freecodecamp.org
 - https://youtu.be/PkZNo7MFNFg
 
-Very good course. But dense! So pause the video a lot and write all the examples yourself + create similar examples.
-
-If you want to watch all, plan for 12 hours work.
+Maybe a bit to long...
 
 ## SheCodes JavaScript Cheatsheet
 
