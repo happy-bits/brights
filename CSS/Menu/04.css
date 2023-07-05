@@ -1,56 +1,46 @@
-body{
+body {
     font-family: Arial;
     background-color: #e8e8e8;
 }
 
 .menu {
     display: flex;
-    border: solid 1px;
+    border:solid 1px;
     justify-content: space-between;
     padding: 0 20px;
     background-color: white;
 }
 
-.menu__item{
+.menu__group {
+    display: flex;
+    padding-left: 0;
+    column-gap: 10px;
+}
+
+.menu__item {
     list-style: none;
 }
 
-.menu__group {
-    display: flex;
-    column-gap:10px; 
-    padding-left:0;
-}
+/* exercise start */
 
 .menu__link {
     text-decoration: none;
-    color:#727272;
+    color: #727272;
     line-height: 30px;
     font-size: 16px;
     padding: 7px 5px;
     font-weight: bold;
 }
 
-.menu__link--small{
-    font-size: 14px;
+.menu__link--small {
     font-weight: normal;
+    font-size: 14px;
 }
 
 .menu__link--selected {
-    color:black;
-    background:#e8e8e8;
+    color: #000;
+    background: #e8e9e9;
     border-radius: 15px;
 }
 
-
-@media (max-width:850px) {
-    /* body {
-        background-color: rebeccapurple;
-    } */
-    .menu{
-        flex-direction: column;
-    }
-
-    /* exercise start */
-    /* exercise end */
-
-}
+/* exercise end */

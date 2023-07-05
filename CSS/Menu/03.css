@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    border:solid 1px;
+    justify-content: space-between;
+}
+
+.menu__item {
+    list-style: none;
+}
+
+.menu__group {
+    display: flex;
+    padding-left: 0;
+    column-gap: 10px;
+}
