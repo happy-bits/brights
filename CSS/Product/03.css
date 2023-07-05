@@ -2,9 +2,9 @@
 
 /* * {
     border: solid 1px;
-} */
+}
 
-/* body, html {
+body, html {
     border: 0;
 } */
 
@@ -22,20 +22,18 @@ body {
     padding:30px 20px;
     border: solid 1px rgb(203, 213, 219);
 
+    /* exercise start */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    position:relative;
-
+    /* exercise end */
 }
 
 .product__buy{
-
     background-color: rgb(54, 179, 158);
     border-radius: 20px;
-    padding: 13px 20px;
+    padding: 13px 25px;
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -44,23 +42,11 @@ body {
     cursor: pointer;
 }
 
-.product__image{
+.product__image {
     height:180px;
-    width:180px;
+    width:180px;   
 }
 
-.product__description{
+.product__description  {
     align-self: baseline;
-}
-
-.product__price{
-    position:absolute;
-    width: 72px;
-    height:72px;
-    background-color: red;
-
-    /* exercise start */
-    
-    /* exercise end */
-
 }
