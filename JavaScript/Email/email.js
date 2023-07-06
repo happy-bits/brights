@@ -5,23 +5,46 @@
 //var w = 567
 
 const inputEmail = document.querySelector('.email')
+const inputEmailAgain = document.querySelector('.email-again')
+const resultArea = document.querySelector('.result')
 
 
 function sendForm() {
 
-    console.log('Yes!')
+    console.log('Start...........')
+
+    // Nollställ klasser
+
+    resultArea.classList.remove('hidden', 'success','error')
 
     // Emailadress är tom
 
     if (inputEmail.value === "") {
-        console.log('Den är tom!')
+        resultArea.classList.add('error')
+        resultArea.innerText = 'Empty email address'
+        return
     }
 
     // Emailadress är ogiltig
 
+    if(!isValidEmailAddress(inputEmail.value)){
+        resultArea.classList.add('error')
+        resultArea.innerText = 'Invalid email address'        
+        return
+    }
+
     // Olika emailaddresser uppe och nere
+    if(inputEmail.value !== inputEmailAgain.value){
+        resultArea.classList.add('error')
+        resultArea.innerText = 'Not the same'        
+        return
+    }
 
     // Success
+
+    resultArea.classList.add('success')
+    resultArea.innerText = 'The email addresses are the same :)'       
+    
 
 }
 
