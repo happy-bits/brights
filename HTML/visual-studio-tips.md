@@ -18,6 +18,10 @@ Some great shortcuts to know about when working with VS Code:
 
     Move code                markera + arrow up or down
 
+## Chome tips
+
+    Open DevTools           Shift-Ctrl-I
+    
 ## Settings
 
     Uncheck "Compact folders"
