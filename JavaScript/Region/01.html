@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="city-hall.png" type="image/png">
+    <title>Region</title>
+    <link rel="stylesheet" href="01.css">
+</head>
+
+<body>
+
+    <div class="center">
+
+        <article class="box">
+
+            <h1>Region</h1>
+            <select class="state" onchange="stateChanged()">
+                <option value="">Choose state...</option>
+                <option value="CA">California</option>
+                <option value="FL">Florida</option>
+                <option value="KY">Kentucky</option>
+                <option value="TX">Texas</option>
+            </select>
+
+            <select class="city hidden" onchange="cityChanged()">
+            </select>
+
+            <div class="result hidden">
+                San Diego has 1386932 inhabitants
+            </div>
+
+        </article>
+    </div>
+    <script src="01.js"></script>
+    </div>
+</body>
+
+</html>
