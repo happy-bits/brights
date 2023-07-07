@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train</title>
+    <link rel="stylesheet" href="01.css">
+    <link rel="shortcut icon" href="train.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="center">
+        <article class="box">
+
+            <div class="radio-row">
+                <div class="radio-group">
+                    <label for="oneway">One way</label>
+                    <input type="radio" id="oneway" name="ways">
+                </div>
+
+                <div class="radio-group">
+                    <label for="roundtrip">Round trip</label>
+                    <input type="radio" id="roundtrip" name="ways">
+                </div>
+            </div>
+
+            <input type="date" class="from">
+            <input type="date" class="to">
+
+            <button>Ok</button>
+            <section class="result hide">
+                You've chosen ...
+            </section>
+
+        </article>
+
+    </div>
+</body>
+
+</html>
