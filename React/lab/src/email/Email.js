@@ -20,20 +20,15 @@ function Email() {
         setInput('klas@katt.nu')
     }
 
-    const compareText = () => {
-        if (input === inputAgain) {
-            return "Same"
-        } else {
-            return "Not the same"
-        }
+    const sendForm = () => {
+        //console.log('sendForm is called!')
+
+        // todo: gör klart
+
+        // Tre olik felmeddelande eller success
+        // Skriv bara ut meddelandet i consolen.
+
     }
-
-    const compareText_shorter = () => {
-        return input === inputAgain ? "Same" : "Not the same"
-    }
-
-    const compareText_even_shorter = () => input === inputAgain ? "Same" : "Not the same"
-
 
 return (
 
@@ -60,18 +55,9 @@ return (
             {inputAgain}
         </div>
 
-        <button onClick={changeEmailAddress} type="button" className="btn btn-primary btn-lg me-1">Change email address</button>
+        <button onClick={sendForm} type="button" className="btn btn-primary btn-lg me-1">Ok</button>
 
-        <div className='alert alert-primary mt-3'>
-            <div>
-                {compareText()}
-            </div>
 
-            <div>
-                {input === inputAgain ? "Same" : "Not the same"}
-            </div>
-
-        </div>
 
     </article>
 )
