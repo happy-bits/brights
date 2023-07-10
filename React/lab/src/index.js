@@ -12,15 +12,11 @@ root.render(
   <React.StrictMode>
 
     <div className='container mt-3'>
-    
-      <div className='my-5'>
-        <Email />
-      </div>
 
       <div className='my-5'>
         <Email />
       </div>
-      
+
     </div>
 
 
