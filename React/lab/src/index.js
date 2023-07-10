@@ -14,7 +14,14 @@ root.render(
     <div className='container mt-3'>
 
       <div className='my-5'>
-        <Email />
+
+        <div className='mb-5'>
+          <Email />
+        </div>
+
+        <div>
+          <Email background="orange" success-message="Yes!" border-thickness={5} />
+        </div>
       </div>
 
     </div>

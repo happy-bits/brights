@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
-function Email() {
+function Email(props) {
+
+    const background = props.background ?? "white"
+    const successMessage = props.successMessage
+
+    
+    console.log(background)
 
     const [input, setInput] = useState('')
     const [inputAgain, setInputAgain] = useState('')
@@ -91,7 +97,8 @@ function Email() {
 
     return (
 
-        <article className="box">
+
+        <article className="box" style={{backgroundColor: background}}>
 
             <h2>Sign up</h2>
 
