@@ -2,11 +2,14 @@ import { useState } from 'react'
 
 function Email(props) {
 
-    const background = props.background ?? "white"
-    const successMessage = props.successMessage
 
-    
-    console.log(background)
+    const background = props.background ?? "white"
+    const successMessage = props.successmessage ?? "Success!"
+    const borderthickness = props.borderthickness ?? 0
+
+
+    console.log(successMessage)
+//    console.log(background)
 
     const [input, setInput] = useState('')
     const [inputAgain, setInputAgain] = useState('')
@@ -49,7 +52,7 @@ function Email(props) {
             return
         }
 
-        setMessage("Success!")
+        setMessage(successMessage)
         setMessageState("success")
     }
 
@@ -95,10 +98,15 @@ function Email(props) {
         }
     }
 
+    const mystyle = {
+        backgroundColor: background,
+        border: `solid ${borderthickness}px`,
+        }
+
     return (
 
 
-        <article className="box" style={{backgroundColor: background}}>
+        <article className="box" style={mystyle}>
 
             <h2>Sign up</h2>
 

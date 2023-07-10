@@ -20,7 +20,7 @@ root.render(
         </div>
 
         <div>
-          <Email background="orange" success-message="Yes!" border-thickness={5} />
+          <Email background="orange" successmessage="Yes!" borderthickness={5} />
         </div>
       </div>
 
