@@ -3,10 +3,16 @@ import {useState} from 'react'
 function Email() {
 
     const [input, setInput] = useState('oo@happybits.se')
+    const [inputAgain, setInputAgain] = useState('oo@happybits.se')
 
     const inputChange = (event) => {
         // input = event.target.value
         setInput(event.target.value)
+    }
+
+    const inputAgainChange = (event) => {
+        // input = event.target.value
+        setInputAgain(event.target.value)
     }
 
     const changeEmailAddress = (event) => {
@@ -30,7 +36,12 @@ function Email() {
 
             <div className="mb-3">
                 <label htmlFor="emailInputAgain" className="form-label">Enter again</label>
-                <input type="email" className="form-control" id="emailInputAgain" placeholder="name@example.com" />
+                <input type="email" value={inputAgain} onChange={inputAgainChange}   className="form-control" id="emailInputAgain" placeholder="name@example.com" />
+            </div> 
+
+
+            <div className='alert alert-primary'>
+                {inputAgain}
             </div>
 
             <button onClick={changeEmailAddress} type="button" className="btn btn-primary btn-lg me-1">Change email address</button>
