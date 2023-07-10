@@ -103,3 +103,18 @@ Upgrade react-scripts
 
     npm uninstall react-scripts
     npm install react-scripts    
+
+## Problem
+
+    File name ... differs from already included file name ...
+
+## Solution
+
+The problem is because of renaming and cAsInG of files and a bug in VS Code.
+
+Try Restart all instances of Visual Studio
+
+Or else, rename the file to something else.
+
+https://askjavascript.com/file-name-differs-from-already-included-file-name-only-in-casing/
+
