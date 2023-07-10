@@ -1,18 +1,18 @@
+import {useState} from 'react'
+
 function Email() {
 
-    // function buttonClicked() {
-    //     console.log("Du klickade på knappen!")
-    // }
+    const [input, setInput] = useState('oo@happybits.se')
 
-    const buttonClicked = (event) => {
-        // console.log("Du klickade på knappen!!!!")
-
-        console.log("ctrl key pressed: " + event.ctrlKey)
-
-        console.log("Det som står inuti knappen: " +  event.target.innerText)
-
+    const inputChange = (event) => {
+        // input = event.target.value
+        setInput(event.target.value)
     }
 
+    const changeEmailAddress = (event) => {
+        // input = "klas@katt.nu"
+        setInput('klas@katt.nu')
+    }
     return (
 
         <article className="box">
@@ -21,7 +21,11 @@ function Email() {
 
             <div className="mb-3">
                 <label htmlFor="emailInput" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="emailInput" placeholder="name@example.com" />
+                <input type="email" value={input} onChange={inputChange} className="form-control" id="emailInput" placeholder="name@example.com" />
+            </div>
+
+            <div className='alert alert-primary'>
+                {input}
             </div>
 
             <div className="mb-3">
@@ -29,11 +33,7 @@ function Email() {
                 <input type="email" className="form-control" id="emailInputAgain" placeholder="name@example.com" />
             </div>
 
-            <button onClick={() => console.log('hej')} type="button" className="btn btn-primary btn-lg me-1">Ok1</button>
-
-            <button onClick={(event) => console.log(event)} type="button" className="btn btn-primary btn-lg me-1">Ok2</button>
-
-            <button onClick={buttonClicked} type="button" className="btn btn-primary btn-lg me-1">Ok3</button>            
+            <button onClick={changeEmailAddress} type="button" className="btn btn-primary btn-lg me-1">Change email address</button>
 
         </article>
     )
