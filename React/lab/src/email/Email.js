@@ -4,6 +4,9 @@ function Email() {
 
     const [input, setInput] = useState('')
     const [inputAgain, setInputAgain] = useState('')
+    
+    const [message, setMessage] = useState('')
+    const [messageState, setMessageState] = useState('hidden') // hidden, error, success
 
     const inputChange = (event) => {
         // input = event.target.value
@@ -23,21 +26,25 @@ function Email() {
     const sendForm = () => {
 
         if (input === "") {
-            console.log("Empty email address")
+            setMessage("Empty email address")
+            setMessageState("error")
             return
         }
 
         if (!isValidEmailAddress(input)) {
-            console.log("Invalid email address")
+            setMessage("Invalid email address")
+            setMessageState("error")
             return
         }
 
         if (input !== inputAgain) {
-            console.log("Not the same")
+            setMessage("Not the same")
+            setMessageState("error")
             return
         }
         
-        console.log("Success")
+        setMessage("Success!")
+        setMessageState("success")
     }
 
     return (
@@ -58,6 +65,12 @@ function Email() {
 
             <button onClick={sendForm} type="button" className="btn btn-primary btn-lg me-1">Ok</button>
 
+            <div>
+
+                <div>Message: {message}</div>
+                <div>State: {messageState}</div>
+
+            </div>
 
 
         </article>
