@@ -11,7 +11,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <Email />
+    <div className='container mt-3'>
+    
+      <div className='my-5'>
+        <Email />
+      </div>
+
+      <div className='my-5'>
+        <Email />
+      </div>
+      
+    </div>
+
 
   </React.StrictMode>
 );
