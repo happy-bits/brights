@@ -46,14 +46,12 @@ function Movie() {
             <img className='img-fluid' src={poster} alt='A poster'/>
 
             <div className='text-center'>
-                <img onClick={() => clickStar(1)} onMouseEnter={() => hoverStar(1)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(1)} alt='A star'  />
-                <img onClick={() => clickStar(2)} onMouseEnter={() => hoverStar(2)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(2)} alt='A star'  />
-                <img onClick={() => clickStar(3)} onMouseEnter={() => hoverStar(3)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(3)} alt='A star'  />
-                <img onClick={() => clickStar(4)} onMouseEnter={() => hoverStar(4)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(4)} alt='A star'  />
-                <img onClick={() => clickStar(5)} onMouseEnter={() => hoverStar(5)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(5)} alt='A star'  />
-            </div>
 
-            {/* todo: skriv "You rated 3 stars" om användaren gjort det. Eller låt det vara tomt. */}
+                {[1,2,3,4,5].map(n =>
+                    <img key={n} onClick={() => clickStar(n)} onMouseEnter={() => hoverStar(n)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(n)} alt='A star'  />
+                )}
+                
+            </div>
 
             <div className='movie__info' onClick={() => clickStar(0)}>
 
