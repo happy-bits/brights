@@ -47,7 +47,7 @@ function Movie() {
                 <img onClick={() => clickStar(5)} onMouseEnter={() => hoverStar(5)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(5)} alt='A star'  />
             </div>
 
-            <div className='movie__info'>
+            <div className='movie__info' onClick={() => clickStar(0)}>
                 Reset
             </div>
 
