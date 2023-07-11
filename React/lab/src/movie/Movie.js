@@ -1,28 +1,25 @@
 
 import poster from './posters/good-bad-ugly.jpg'
+import starGray from './stars/star-gray.png'
 
 function Movie() {
     return(
 
         <article className="box">
 
-            <img className='img-fluid' src={poster}/>
+            <img className='img-fluid' src={poster} alt='A poster'/>
 
-            {/* 
-            
-            todo: skapa en div-tag med klassen "text-center"
+            <div className='text-center'>
+                <img className='movie__star' src={starGray} alt='A star'  />
+                <img className='movie__star' src={starGray} alt='A star'  />
+                <img className='movie__star' src={starGray} alt='A star'  />
+                <img className='movie__star' src={starGray} alt='A star'  />
+                <img className='movie__star' src={starGray} alt='A star'  />
+            </div>
 
-            I den div'taggen lägg in fem img-taggar
-
-            De behöver ha en css-klass (kolla i custom.css)
-            
-
-
-            Skriv "You rated 3 stars!" i en div-tag
-            Div-taggen ska ha en klass (kolla i custom.css)
-
-
-            */}
+            <div className='movie__info'>
+                You rated 3 stars!
+            </div>
 
         </article>
     )
