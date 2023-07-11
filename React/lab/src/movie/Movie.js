@@ -1,11 +1,16 @@
 
+import { useState } from 'react'
 import poster from './posters/good-bad-ugly.jpg'
 import starGray from './stars/star-gray.png'
+import star from './stars/star.png'
 
 function Movie() {
 
+    const [chosenStars, setChosenStars] = useState(0)
+
     const clickStar = (number) => {
         console.log("Clicked star", number)
+        setChosenStars(number)
     }
 
     const hoverStar = (number) => {
@@ -15,18 +20,16 @@ function Movie() {
     const leftStar = () => {
         console.log("Left a star")
     }
-/*
-todo: 
 
-- Skriv ut i konsolen om en användare håller musen över en stjärna, t.ex "Hovered star 4"
-- Skriv ut i konsolen om en användare lämnar en stjärna, skriv då "Left a star"
+    const selectStarImageFor = (number) => {
 
-tips:
-
-- Skapa två till funktioner (som clickStar)
-- Lägg till två till events (som onClick)
-
-*/
+        if (chosenStars >= number){
+            return star
+        } else {
+            return starGray
+        }
+        
+    }
 
     return(
 
@@ -34,16 +37,18 @@ tips:
 
             <img className='img-fluid' src={poster} alt='A poster'/>
 
+            <div>{chosenStars}</div>
+
             <div className='text-center'>
-                <img onClick={() => clickStar(1)} onMouseEnter={() => hoverStar(1)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(2)} onMouseEnter={() => hoverStar(2)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(3)} onMouseEnter={() => hoverStar(3)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(4)} onMouseEnter={() => hoverStar(4)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(5)} onMouseEnter={() => hoverStar(5)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
+                <img onClick={() => clickStar(1)} onMouseEnter={() => hoverStar(1)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(1)} alt='A star'  />
+                <img onClick={() => clickStar(2)} onMouseEnter={() => hoverStar(2)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(2)} alt='A star'  />
+                <img onClick={() => clickStar(3)} onMouseEnter={() => hoverStar(3)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(3)} alt='A star'  />
+                <img onClick={() => clickStar(4)} onMouseEnter={() => hoverStar(4)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(4)} alt='A star'  />
+                <img onClick={() => clickStar(5)} onMouseEnter={() => hoverStar(5)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(5)} alt='A star'  />
             </div>
 
             <div className='movie__info'>
-                You rated 3 stars!
+                Reset
             </div>
 
         </article>
