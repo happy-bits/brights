@@ -56,7 +56,9 @@ function Movie() {
             {/* todo: skriv "You rated 3 stars" om användaren gjort det. Eller låt det vara tomt. */}
 
             <div className='movie__info' onClick={() => clickStar(0)}>
-                Reset
+
+                { chosenStars === 0 ? <>&nbsp;</> : <>You rated {chosenStars} star{chosenStars === 1 ? '' : 's'}</>}
+                
             </div>
 
         </article>
