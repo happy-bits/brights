@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import './custom.css'
 
+import ghostbuster from './movie/posters/ghostbusters.jpg'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,7 +19,7 @@ root.render(
 
       <div className='my-5'>
 
-          <Movie  />
+          <Movie title="Ghostbusters" poster={ghostbuster} maxstars={4} />
 
       </div>
 
