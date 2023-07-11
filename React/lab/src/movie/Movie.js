@@ -28,7 +28,7 @@ function Movie() {
         } else {
             return starGray
         }
-        
+
     }
 
     return(
@@ -36,8 +36,6 @@ function Movie() {
         <article className="box">
 
             <img className='img-fluid' src={poster} alt='A poster'/>
-
-            <div>{chosenStars}</div>
 
             <div className='text-center'>
                 <img onClick={() => clickStar(1)} onMouseEnter={() => hoverStar(1)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(1)} alt='A star'  />
