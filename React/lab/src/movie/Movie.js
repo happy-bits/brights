@@ -39,8 +39,6 @@ function Movie() {
 
     }
 
-    // todo: Om användaren trycker på Reset så ska alla gula stjärnor bli grå
-
     return(
 
         <article className="box">
@@ -54,6 +52,8 @@ function Movie() {
                 <img onClick={() => clickStar(4)} onMouseEnter={() => hoverStar(4)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(4)} alt='A star'  />
                 <img onClick={() => clickStar(5)} onMouseEnter={() => hoverStar(5)} onMouseLeave={() => leftStar()} className='movie__star' src={selectStarImageFor(5)} alt='A star'  />
             </div>
+
+            {/* todo: skriv "You rated 3 stars" om användaren gjort det. Eller låt det vara tomt. */}
 
             <div className='movie__info' onClick={() => clickStar(0)}>
                 Reset
