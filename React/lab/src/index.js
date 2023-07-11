@@ -19,7 +19,7 @@ root.render(
 
       <div className='my-5'>
 
-          <Movie title="Ghostbusters" poster={ghostbuster} maxstars={4} />
+          <Movie title="Ghostbusterdddds" poster={ghostbuster} maxstars={4} />
 
       </div>
 
