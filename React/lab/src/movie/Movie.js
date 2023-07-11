@@ -8,6 +8,13 @@ function Movie() {
         console.log("Clicked star", number)
     }
 
+    const hoverStar = (number) => {
+        console.log("Hovered star", number)
+    }
+
+    const leftStar = () => {
+        console.log("Left a star")
+    }
 /*
 todo: 
 
@@ -28,11 +35,11 @@ tips:
             <img className='img-fluid' src={poster} alt='A poster'/>
 
             <div className='text-center'>
-                <img onClick={() => clickStar(1)} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(2)} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(3)} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(4)} className='movie__star' src={starGray} alt='A star'  />
-                <img onClick={() => clickStar(5)} className='movie__star' src={starGray} alt='A star'  />
+                <img onClick={() => clickStar(1)} onMouseEnter={() => hoverStar(1)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
+                <img onClick={() => clickStar(2)} onMouseEnter={() => hoverStar(2)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
+                <img onClick={() => clickStar(3)} onMouseEnter={() => hoverStar(3)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
+                <img onClick={() => clickStar(4)} onMouseEnter={() => hoverStar(4)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
+                <img onClick={() => clickStar(5)} onMouseEnter={() => hoverStar(5)} onMouseLeave={() => leftStar()} className='movie__star' src={starGray} alt='A star'  />
             </div>
 
             <div className='movie__info'>
