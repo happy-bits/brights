@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Email from './email/Email'
+// import Email from './email/Email'
+
+import Movie from './movie/Movie'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -15,13 +17,8 @@ root.render(
 
       <div className='my-5'>
 
-        <div className='mb-5'>
-          <Email />
-        </div>
+          <Movie  />
 
-        <div>
-          <Email background="orange" successmessage="Yes!" borderthickness={5} />
-        </div>
       </div>
 
     </div>

@@ -27,10 +27,10 @@ function Email(props) {
         setInputAgain(event.target.value)
     }
 
-    const changeEmailAddress = (event) => {
-        // input = "klas@katt.nu"
-        setInput('klas@katt.nu')
-    }
+    // const changeEmailAddress = (event) => {
+    //     // input = "klas@katt.nu"
+    //     setInput('klas@katt.nu')
+    // }
 
     const sendForm = () => {
 
@@ -73,30 +73,30 @@ function Email(props) {
         )
     }
 
-    const displayMessage_easier = () => {
+    // const displayMessage_easier = () => {
 
-        if (messageState === "success") {
+    //     if (messageState === "success") {
 
-            return (
+    //         return (
 
-                <div className="alert alert-success mt-3">
-                    {message}
-                </div>
+    //             <div className="alert alert-success mt-3">
+    //                 {message}
+    //             </div>
 
-            )
+    //         )
 
-        }
+    //     }
 
-        if (messageState === "error") {
-            return (
+    //     if (messageState === "error") {
+    //         return (
 
-                <div className="alert alert-danger mt-3">
-                    {message}
-                </div>
+    //             <div className="alert alert-danger mt-3">
+    //                 {message}
+    //             </div>
 
-            )
-        }
-    }
+    //         )
+    //     }
+    // }
 
     const mystyle = {
         backgroundColor: background,
