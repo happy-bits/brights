@@ -31,6 +31,8 @@ function Movie() {
 
     }
 
+    // todo: Om användaren trycker på Reset så ska alla gula stjärnor bli grå
+
     return(
 
         <article className="box">
