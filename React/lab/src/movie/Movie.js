@@ -7,21 +7,29 @@ import star from './stars/star.png'
 function Movie() {
 
     const [chosenStars, setChosenStars] = useState(0)
+    const [hoveredStar, setHoveredStar] = useState(null)
 
     const clickStar = (number) => {
-        console.log("Clicked star", number)
         setChosenStars(number)
     }
 
     const hoverStar = (number) => {
-        console.log("Hovered star", number)
+        setHoveredStar(number)
     }
 
     const leftStar = () => {
-        console.log("Left a star")
+        setHoveredStar(null)
     }
 
     const selectStarImageFor = (number) => {
+
+        if(hoveredStar!=null){
+            if (hoveredStar >= number){
+                return star
+            } else {
+                return starGray
+            }
+        }
 
         if (chosenStars >= number){
             return star
