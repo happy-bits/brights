@@ -22,8 +22,6 @@ root.render(
 
         <Cart/>
 
-
-
       </div>
 
     </div>
