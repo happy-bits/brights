@@ -3,15 +3,12 @@ import {useState} from 'react'
 function CartItem() {
 
     const name = "Banan"
-    
+    const price = 12
+    const maxNrOfProducts = 5
+
     const [amount, setAmount] = useState(7)  
 
     const adjustProduct = (change) => {
-        console.log('Du vill ändra antalet med ' + change)
-
-        //setAmount(amount + change)
-
-        //setAmount(prev => prev + change)
 
         setAmount(prev => {
             return prev + change
@@ -19,16 +16,21 @@ function CartItem() {
 
     }
 
+    // todo: 
+    // - Bara tillåta värden mellan 0 och 5 (maxNrOfProducts)
+    // - Disable'a knappen vid gränsvärdena
+    // - Räkna ut delsumman
+
     return (
         <div className="row my-2 align-items-center">
             <div className="col-3">
                 {name}
             </div>
             <div className="col-3 text-end">
-                ... kr/st
+                {price} kr/st
             </div>
             <div className="col-3 d-flex justify-content-between">
-                <button onClick={() => adjustProduct(-1)} className="btn btn-primary btn-sm">-</button>
+                <button disabled={false} onClick={() => adjustProduct(-1)} className="btn btn-primary btn-sm">-</button>
                 <div className="px-2 align-self-center">{amount}</div>
                 <button onClick={() => adjustProduct(+1)}className="btn btn-primary btn-sm">+</button>
             </div>
