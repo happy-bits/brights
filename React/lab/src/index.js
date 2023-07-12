@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// import Email from './email/Email'
+//import Email from './email/Email'
+//import Movie from './movie/Movie'
 
-import Movie from './movie/Movie'
+import Cart from './cart/Cart'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -19,7 +20,9 @@ root.render(
 
       <div className='my-5'>
 
-          <Movie title="Ghostbusterdddds" poster={ghostbuster} maxstars={4} />
+        <Cart/>
+
+
 
       </div>
 
