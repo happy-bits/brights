@@ -1,25 +1,36 @@
-// Styling
+import {useState} from 'react'
 
 function CartItem() {
 
-    // todo:
-    // Om man klickar på plus: skriv ut "add one" i console'n
-    // Om man klickar på minus: skriv ut "subtract one" i console'n
+    const name = "Banan"
+    
+    const [amount, setAmount] = useState(7)  
 
-    // 9:30 fortsätter vi
+    const adjustProduct = (change) => {
+        console.log('Du vill ändra antalet med ' + change)
+
+        //setAmount(amount + change)
+
+        //setAmount(prev => prev + change)
+
+        setAmount(prev => {
+            return prev + change
+        })
+
+    }
 
     return (
         <div className="row my-2 align-items-center">
             <div className="col-3">
-                ...
+                {name}
             </div>
             <div className="col-3 text-end">
                 ... kr/st
             </div>
             <div className="col-3 d-flex justify-content-between">
-                <button className="btn btn-primary btn-sm">-</button>
-                <div className="px-2 align-self-center">...</div>
-                <button className="btn btn-primary btn-sm">+</button>
+                <button onClick={() => adjustProduct(-1)} className="btn btn-primary btn-sm">-</button>
+                <div className="px-2 align-self-center">{amount}</div>
+                <button onClick={() => adjustProduct(+1)}className="btn btn-primary btn-sm">+</button>
             </div>
             <div className="col-3 text-end">
                 ... kr
