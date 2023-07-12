@@ -5,18 +5,24 @@ Ramzi
 Ludwig
 Petter
 
-# Group 2
+FlashCards
+
+# Group 2 
 
 Delil
 Emmy
 Hana
 Aladdin
 
+Egen quiz (gratis API)
+
 # Group 3
 
 Andreas A
 Mervan
 Lara
+
+Convert temperture
 
 # Group 4
 
@@ -25,12 +31,15 @@ Hjalmar
 Emma
 Felicia
 
+Bastard
+
 # Group 5
 
 Jin
 Isabelle
 Noah
 
+Convert valuta
 
 # Group 6
 
@@ -38,3 +47,5 @@ Andreas P
 Rasmus
 Tan
 Ahmad
+
+Eget: yatzy, boka direkt
