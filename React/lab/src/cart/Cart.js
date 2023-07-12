@@ -42,20 +42,54 @@ function CartItem(props) {
 function Cart() {
 
     const [cart, setCart] = useState([
-        {id:"p1", amount: 3},
-        {id:"p2", amount: 5},
-        {id:"p3", amount: 2},
+        {id:"p1", amount: 0},
+        {id:"p2", amount: 0},
+        {id:"p3", amount: 0},
 
     ])
 
     const adjustProduct = (id, change) => {
-        console.log(`Adjust product with id ${id} with: ${change}`)
+
+        const newState = cart.map(obj=>{
+            if(obj.id === id){
+                return{...obj, amount: obj.amount+change}
+            }
+            return obj
+        })
+
+        setCart(newState)
+
     }
 
     const totalAmount = () => {
-        // todo: försök lösa denna
-        return 1234567
+        let result = 0
+        for(let item of cart){
+            result += getProduct(item.id).price * item.amount
+        }
+        return result
     }
+
+    // const totalAmount = () => {
+    //     let ta = 0
+    //     cart.map(a => {ta+= a.amount * getProduct(a.id).price})
+    //     return ta
+    // }
+
+    // const totalAmount = () => {
+    //     let ta = 0
+    //     cart.forEach( element => {
+    //         ta += element.amount * getProduct(element.id).price
+    //     })
+    //     return ta
+    // }
+
+    // const totalAmount = () => {
+    //     // todo: försök lösa denna
+
+    //     const price = cart.map(a => {return a.amount * getProduct(a.id).price})
+    //     return price.reduce( (a,b) => a+b )
+
+    // }
 
     return (
         <article className="box" style={{ userSelect: "none" }}>
