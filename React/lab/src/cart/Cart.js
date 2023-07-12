@@ -2,6 +2,12 @@
 
 function CartItem() {
 
+    // todo:
+    // Om man klickar på plus: skriv ut "add one" i console'n
+    // Om man klickar på minus: skriv ut "subtract one" i console'n
+
+    // 9:30 fortsätter vi
+
     return (
         <div className="row my-2 align-items-center">
             <div className="col-3">
