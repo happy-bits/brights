@@ -1,56 +1,23 @@
 import {useState} from 'react'
 
-function CartItem() {
+function CartItem(props) {
 
-    const name = "Banan"
-    const price = 12
-    const maxNrOfProducts = 5
-
-    const [amount, setAmount] = useState(5)  
-
-    const adjustProduct = (change) => {
-
-        setAmount(prev => {
-
-            prev += change
-
-            prev = Math.min(maxNrOfProducts, prev)
-
-            // if (prev>maxNrOfProducts){
-            //     prev = maxNrOfProducts
-            // }
-            
-            prev = Math.max(0, prev)
-
-            // if (prev<0){
-            //     prev = 0
-            // }
-
-            return prev
-        })
-
-    }
-
-    // todo: 
-    // - Bara tillåta värden mellan 0 och 5 (maxNrOfProducts)
-    // - Disable'a knappen vid gränsvärdena
-    // - Räkna ut delsumman
 
     return (
         <div className="row my-2 align-items-center">
             <div className="col-3">
-                {name}
+                {props.id}
             </div>
             <div className="col-3 text-end">
-                {price} kr/st
+                .... kr/st
             </div>
             <div className="col-3 d-flex justify-content-between">
-                <button disabled={amount === 0} onClick={() => adjustProduct(-1)} className="btn btn-primary btn-sm">-</button>
-                <div className="px-2 align-self-center">{amount}</div>
-                <button disabled={amount === maxNrOfProducts} onClick={() => adjustProduct(+1)}className="btn btn-primary btn-sm">+</button>
+                <button  className="btn btn-primary btn-sm">-</button>
+                <div className="px-2 align-self-center">{props.amount}</div>
+                <button className="btn btn-primary btn-sm">+</button>
             </div>
             <div className="col-3 text-end">
-                {amount * price} kr
+                ... kr
             </div>
 
         </div>
@@ -59,10 +26,18 @@ function CartItem() {
 
 function Cart() {
 
+    const [cart, setCart] = useState([
+        {id:"p1", amount: 3},
+        {id:"p2", amount: 5},
+        {id:"p3", amount: 3},
+
+    ])
+
     return (
         <article className="box" style={{ userSelect: "none" }}>
             <h1 className="display-5 mb-4">Cart</h1>
-            <CartItem />
+
+            {cart.map(item => <CartItem key={item.id} id={item.id} amount={item.amount}/>)}
 
             <div className="row mt-4">
                 <div className="col-9">
