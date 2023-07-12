@@ -6,12 +6,27 @@ function CartItem() {
     const price = 12
     const maxNrOfProducts = 5
 
-    const [amount, setAmount] = useState(7)  
+    const [amount, setAmount] = useState(5)  
 
     const adjustProduct = (change) => {
 
         setAmount(prev => {
-            return prev + change
+
+            prev += change
+
+            prev = Math.min(maxNrOfProducts, prev)
+
+            // if (prev>maxNrOfProducts){
+            //     prev = maxNrOfProducts
+            // }
+            
+            prev = Math.max(0, prev)
+
+            // if (prev<0){
+            //     prev = 0
+            // }
+
+            return prev
         })
 
     }
@@ -30,12 +45,12 @@ function CartItem() {
                 {price} kr/st
             </div>
             <div className="col-3 d-flex justify-content-between">
-                <button disabled={false} onClick={() => adjustProduct(-1)} className="btn btn-primary btn-sm">-</button>
+                <button disabled={amount === 0} onClick={() => adjustProduct(-1)} className="btn btn-primary btn-sm">-</button>
                 <div className="px-2 align-self-center">{amount}</div>
-                <button onClick={() => adjustProduct(+1)}className="btn btn-primary btn-sm">+</button>
+                <button disabled={amount === maxNrOfProducts} onClick={() => adjustProduct(+1)}className="btn btn-primary btn-sm">+</button>
             </div>
             <div className="col-3 text-end">
-                ... kr
+                {amount * price} kr
             </div>
 
         </div>
