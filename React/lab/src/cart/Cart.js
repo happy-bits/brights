@@ -1,15 +1,30 @@
 import {useState} from 'react'
 
+const products = new Map([
+
+    ['p1', { name: 'Cheese', price: 45}],
+    ['p2', { name: 'Tomato', price: 14}],
+    ['p3', { name: 'Garlic', price: 4}],
+
+])
+
+const maxNrOfProducts = 5
+
+function getProduct(id) {
+    return products.get(id)
+}
+
 function CartItem(props) {
 
+    const product = getProduct(props.id)
 
     return (
         <div className="row my-2 align-items-center">
             <div className="col-3">
-                {props.id}
+                {product.name}
             </div>
             <div className="col-3 text-end">
-                .... kr/st
+                {product.price} kr/st
             </div>
             <div className="col-3 d-flex justify-content-between">
                 <button  className="btn btn-primary btn-sm">-</button>
@@ -17,7 +32,7 @@ function CartItem(props) {
                 <button className="btn btn-primary btn-sm">+</button>
             </div>
             <div className="col-3 text-end">
-                ... kr
+                {props.amount * product.price} kr
             </div>
 
         </div>
@@ -27,7 +42,7 @@ function CartItem(props) {
 function Cart() {
 
     const [cart, setCart] = useState([
-        {id:"p1", amount: 3},
+        {id:"p1", amount: 30},
         {id:"p2", amount: 5},
         {id:"p3", amount: 3},
 
