@@ -111,3 +111,21 @@ Continue with the component and add a button to clear the text
 Continue with the component and show a message if the text contains five or more characters.
 
 ![](images/followme3.png)
+
+# Selectbox1
+
+Create a select-box with three options: Apple, Banana, Orange
+
+The user choice should change the text at the end
+
+![](images/selectbox1.png)
+
+# Checkbox1
+
+If the first checkbox is ticked, show *You like pizza: Yes* (otherwise *No*)
+
+If the second checkbox is ticked, show *You like carrots: Yes* otherwise *No*
+
+If both are ticked, write the text *You are weird* at the end.
+
+![](images/checkbox1.png)
